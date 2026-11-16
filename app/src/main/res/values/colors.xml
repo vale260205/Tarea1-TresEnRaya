@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--Paleta Minimal Neon-->
+    <!--Fondo general de la aplicación-->
+    <color name = "fondo">#F5F0FF</color>
+
+    <!--Interior de las nueve casillas-->
+    <color name = "casilla">#E7DEFF</color>
+
+    <!--Contorno de las casillas -->
+    <color name = "borde_casilla">#283751</color>
+
+    <!--Fichas X-->
+    <color name = "azul_neon">#35BFE8</color>
+
+    <!--Fichas O-->
+    <color name = "violeta_neon">#9065DB</color>
+
+    <!--Títulos y textos importantes-->
+    <color name= "texto_principal">#30264A</color>
+
+    <!--Indicador de turno y textos auxiliares-->
+    <color name= "texto_secundario">#625675</color>
+</resources>

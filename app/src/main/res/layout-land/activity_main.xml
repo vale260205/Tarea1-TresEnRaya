@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <!-- Horizontal: tablero a la izquierda y panel a la derecha -->
+
+    <GridLayout
+        android:id="@+id/tablero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/panel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/casilla1"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/casilla"
+            android:text=""
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/casilla2"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/casilla"
+            android:text=""
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/casilla3"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/casilla"
+            android:text=""
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/casilla4"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/casilla"
+            android:text=""
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/casilla5"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/casilla"
+            android:text=""
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/casilla6"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/casilla"
+            android:text=""
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/casilla7"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/casilla"
+            android:text=""
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/casilla8"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/casilla"
+            android:text=""
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/casilla9"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@color/casilla"
+            android:text=""
+            android:textSize="36sp" />
+
+    </GridLayout>
+
+    <!-- Panel derecho con scroll por si no cabe en pantallas bajas -->
+    <ScrollView
+        android:id="@+id/panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintStart_toEndOf="@+id/tablero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tres en raya"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/texto_principal"
+                android:fontFamily="sans" />
+
+            <TextView
+                android:id="@+id/estado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/azul_neon"
+                android:fontFamily="sans"
+                android:text="Turno de X"
+                android:textSize="22sp" />
+
+            <!-- Marcador de victorias -->
+            <TextView
+                android:id="@+id/marcador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="@color/texto_secundario"
+                android:fontFamily="sans"
+                android:text="X: 0   |   O: 0"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Botones de abajo -->
+            <LinearLayout
+                android:id="@+id/botones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnReiniciar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:backgroundTint="@color/violeta_neon"
+                    android:textColor="@color/black"
+                    android:text="Reiniciar" />
+
+                <Button
+                    android:id="@+id/btnBorrarMarcador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/azul_neon"
+                    android:textColor="@color/black"
+                    android:text="Borrar marcador" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
